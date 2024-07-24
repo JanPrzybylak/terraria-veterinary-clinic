@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CeriiaTeraiia - Price List</title>
+    <style>
+        body {
+            background-color: #C1E1C1; /* Soft green */
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #2f4f4f; /* Dark slate gray */
+            padding: 20px;
+            text-align: center;
+        }
+
+        header img {
+            width: 300px;
+            height: auto;
+        }
+
+        header h1 {
+            color: #fff; /* White color */
+            font-size: 36px;
+            margin-top: 10px;
+        }
+
+        .price-list {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff; /* White background */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+        }
+
+        .price-list h2 {
+            color: #2f4f4f; /* Dark slate gray */
+            border-bottom: 2px solid #2f4f4f; /* Dark slate gray underline */
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .price-item {
+            margin-bottom: 15px;
+        }
+
+        .price-item h3 {
+            color: #2f4f4f; /* Dark slate gray */
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .price-item p {
+            color: #666; /* Dark gray */
+            margin: 0;
+        }
+
+        footer {
+            background-color: #2f4f4f; /* Dark slate gray */
+            padding: 20px;
+            text-align: center;
+            color: #fff; /* White color */
+        }
+
+        .calculator {
+            margin-top: 20px;
+        }
+
+        .calculator select, .calculator button {
+            padding: 10px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        .back-button {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-button button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #2f4f4f; /* Dark slate gray */
+            color: #fff; /* White color */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .back-button button:hover {
+            background-color: #555; /* Dark gray on hover */
+        }
+    </style>
+</head>
+<body>
+<header>
+    <!-- Adjust the width and height of the logo as needed -->
+    <img src="https://i.imgur.com/HhEeyi7.jpg" alt="CeriiaTeraiia Logo">
+    <h1>CeriiaTeraiia - Price List</h1>
+</header>
+
+<div class="price-list">
+    <h2>Price List</h2>
+
+    <div class="price-item">
+        <h3>Health Potion</h3>
+        <p>Restores 100 health.</p>
+        <p>Price: 10 gold coins</p>
+    </div>
+
+    <div class="price-item">
+        <h3>Mana Potion</h3>
+        <p>Restores 100 mana.</p>
+        <p>Price: 15 gold coins</p>
+    </div>
+
+    <div class="price-item">
+        <h3>Buff Potion</h3>
+        <p>Grants various buffs.</p>
+        <p>Price: 20 gold coins</p>
+    </div>
+
+    <!-- Add more price items as needed -->
+
+</div>
+
+<div class="calculator">
+    <h2>Price Calculator</h2>
+    <form id="price-form">
+        <select name="items[]" multiple>
+            <option value="health-potion">Health Potion</option>
+            <option value="mana-potion">Mana Potion</option>
+            <option value="buff-potion">Buff Potion</option>
+        </select>
+        <button type="button" onclick="calculatePrice()">Calculate Price</button>
+    </form>
+    <p id="result"></p>
+</div>
+
+<div class="back-button">
+    <button onclick="goBack()">Back to Main Page</button>
+</div>
+
+<footer>
+    <p>&copy; 2024 CeriiaTeraiia Clinic</p>
+</footer>
+
+<script>
+    function calculatePrice() {
+        document.getElementById("result").innerText = "Hello World";
+    }
+
+    function goBack() {
+        window.history.back();
+    }
+</script>
+
+</body>
+</html>
